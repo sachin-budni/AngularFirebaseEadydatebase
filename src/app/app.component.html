@@ -1,0 +1,14 @@
+jfklsdj
+<ul>
+  <ol *ngFor="let mes of lists">
+    {{mes | json}}
+    {{mes.name}}
+  </ol>
+</ul>
+
+
+Name :<input [(ngModel)]="name"><br/>
+Office :<input [(ngModel)]="office"><br/>
+Position :<input [(ngModel)]="position"><br/>
+Salary :<input [(ngModel)]="salary" (enter.keydown)="send()"><br/>
+<button (click)="send()">Send</button>
