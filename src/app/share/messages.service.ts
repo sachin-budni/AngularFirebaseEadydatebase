@@ -10,7 +10,7 @@ export class MessagesService {
   constructor(private db : AngularFireDatabase) { }
 
   getData(){
-    this.lists = this.db.list('employees');
+    this.lists = this.db.list('employees',ref=>ref.limitToFirst(3));
     return this.lists;
   }
 
